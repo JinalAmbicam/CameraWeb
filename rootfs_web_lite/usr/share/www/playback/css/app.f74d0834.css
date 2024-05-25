@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+}
+.search-box {
+  border: 1px solid #ccc;
+}
+.search-box .search-title {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.search-box .search-params .el-input {
+  width: 520px !important;
+}
+.search-box .search-params .el-input .el-input--large {
+  padding: 0 10px !important;
+}
+.table-box {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding: 10px;
+}
+.table-box .table-title {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+#container {
+  background: rgba(13, 14, 27, 0.7);
+  width: 960px;
+  height: 597px;
+}
+@media (max-width: 720px) {
+  #container {
+    width: 95vw;
+    height: 52.7vw;
+    margin: 0 auto;
+  }
+}
+.el-date-editor--timerange {
+  width: 100% !important;
+}
+.back-btn {
+  margin: 10px 0;
+}
+.search-btn {
+  margin: 10px;
+}
+.format-btn {
+  height: 32px;
+  margin-left: 20px;
+}
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-mute-button {
+  display: none;
+}
+.download_dialog .el-dialog {
+  box-shadow: unset;
+  background-color: unset;
+}
+.download_dialog .el-dialog__body {
+  text-align: center;
+}
+.download_dialog .download_text {
+  color: #fff;
+  font-size: 16px;
+}
+.download_dialog .el-progress__text {
+  color: #fff;
+}
+.table-button {
+  display: flex;
+  justify-content: end;
+}
+.table-data {
+  margin-top: 10px;
+}

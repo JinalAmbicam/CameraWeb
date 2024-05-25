@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>playback</title>
+    <script>
+            let strcookie = document.cookie
+            let arrcookie = strcookie.split("; ")
+            let language = ''
+            for ( var i = 0; i < arrcookie.length; i++) {
+                var arr = arrcookie[i].split("=");
+                if (arr[0] == 'juanipcam_lang'){
+                    language =  decodeURIComponent(arr[1])
+                }
+            }
+            if(language === 'en'){
+               window.langstr = {
+                    play: "Play",
+                    pause: "Pause",
+                    mute: "Mute",
+                    screenshot: "Screenshot",
+                    fullscreen:"Fullscreen"
+               }
+            } else{
+                window.langstr = {
+                    play: "播放",
+                    pause: "暂停",
+                    mute: "静音",
+                    screenshot: "截图",
+                    fullscreen:"全屏"
+                }
+            }
+    </script>
+    <script src="./jessibuca-pro.js"></script>
+    <script defer="defer" src="./playback/js/chunk-vendors.d7233b24.js"></script>
+    <script defer="defer" src="./playback/js/app.f60e15ad.js"></script>
+    <link href="./playback/css/chunk-vendors.032c72c1.css" rel="stylesheet">
+    <link href="./playback/css/app.f74d0834.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+<script>
+</script>
+</html>

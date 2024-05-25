@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8f9fa;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+
+      }
+      .signin-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+            max-width: 400px;
+      }
+      .signin-box img {
+            width: 100%;
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+        h4 {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #444444;
+
+        }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px auto 0;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 15px;
+      }
+      .checkbox-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .checkbox-container label {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .checkbox-container input[type="checkbox"] {
+            accent-color: #c04242; /* Set the checkbox color */
+        }
+      button {
+        background-color: #c04242;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 0.95em;
+      }
+      .checkbox-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .checkbox-container label {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+      #email-error,
+      #password-error {
+        color: #c04242;
+      }
+      button:hover {
+            background-color: #2a2a2a;
+        }
+        .logo-text {
+            color: #444444;
+            font-family: sans-serif; /* Assuming you have Nova Flat font loaded */
+            font-size: 1.5em; /* Adjust font size as desired */
+            margin: 0 10px; /* Add some margin between logo and text */
+        }
+    </style>
+    <script type="text/javascript" src="js/language.js"></script>
+    <script type="text/javascript">
+      document.write(
+        "<scr" +
+          'ipt src="' +
+          getDefaultLanguage() +
+          '" id="js_lang" ></sc' +
+          "ript>"
+      );
+    </script>
+    <script type="text/javascript" src="js/cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/xml2json.js"></script>
+    <script type="text/javascript" src="js/xml.js"></script>
+    <link id="css-link" rel="stylesheet" href="js/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="signin-box">
+        <img src="./images/logo.png" alt="Logo" style="width: 300px" />
+        <div> 
+            <!-- <span><img src="torquelogofinale.png" alt="TORQUE Logo" style="width: 50px; height: 40px;"></span> -->
+            <span class="logo-text" style="font-size: 16px;">TORQUE CAM</span>
+        <!-- <h4>Sign In</h4> -->
+        <form onsubmit="handleSubmit(event)">
+          <!-- <label for="userName">Username</label> -->
+          <input id="userName" type="text" value="" placeholder="Username" />
+
+          <!-- <label for="password">Password</label> -->
+          <input type="password" name="password" id="password" placeholder="Password" />
+          <span id="password-error"></span>
+
+          <div class="checkbox-container">
+          <label>
+            <input id="saveCookie" type="checkbox" checked="checked" />
+            <script type="text/javascript">
+              document.write(langstr.remember_password);
+            </script>
+          </label>
+          <label>
+            <input id="timeAlign" type="checkbox" />
+            <script type="text/javascript">
+              document.write(langstr.time_align);
+            </script>
+          </label>
+        </div>
+          <button type="submit" id="submit">
+            <script type="text/javascript">
+                document.write(langstr.login);
+              </script>
+          </button>
+        </form>
+        <!-- Adding the message_here span -->
+        <span id="message_here"></span>
+      </div>
+    </div>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        var userName = document.getElementById("userName").value;
+        var password = document.getElementById("password").value;
+        var saveCookie = document.getElementById("saveCookie").checked;
+        var timeAlign = document.getElementById("timeAlign").checked;
+      }
+    </script>
+  </body>
+</html>
