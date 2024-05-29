@@ -481,7 +481,7 @@ var langstr={
 	ptz_set: '232 settings',
 	ptz_address_code: 'address code',
 	ptz_protocol: 'protocol',
-	ptz_speed: 'speed',
+	ptz_speed: 'Speed',
 	ptz_port_set: '232 port settings',
 	ptz_baud_rate: 'Baud rate',
 	ptz_data_bits: 'Data bits',

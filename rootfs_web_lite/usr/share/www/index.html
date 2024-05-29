@@ -5,6 +5,7 @@
     <title>Sign In</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
       body,
       html {
@@ -36,10 +37,12 @@
       .signin-box img {
             width: 100%;
             max-width: 250px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         h4 {
-            margin-top: 20px;
+          font-family: helvetica;
+            margin-top: 5px;
+            margin-bottom: 5px;
             font-size: 1.5em;
             color: #444444;
 
@@ -103,7 +106,7 @@
         }
         .logo-text {
             color: #444444;
-            font-family: sans-serif; /* Assuming you have Nova Flat font loaded */
+            font-family:Helvetica; /* Assuming you have Nova Flat font loaded */
             font-size: 1.5em; /* Adjust font size as desired */
             margin: 0 10px; /* Add some margin between logo and text */
         }
@@ -131,8 +134,8 @@
         <img src="./images/logo.png" alt="Logo" style="width: 300px" />
         <div> 
             <!-- <span><img src="torquelogofinale.png" alt="TORQUE Logo" style="width: 50px; height: 40px;"></span> -->
-            <span class="logo-text" style="font-size: 16px;">TORQUE CAM</span>
-        <!-- <h4>Sign In</h4> -->
+            <!-- <span class="logo-text" style="font-size: 16px;">TORQUE CAM</span> -->
+        <h4>Sign In</h4>
         <form onsubmit="handleSubmit(event)">
           <!-- <label for="userName">Username</label> -->
           <input id="userName" type="text" value="" placeholder="Username" />
@@ -141,7 +144,7 @@
           <input type="password" name="password" id="password" placeholder="Password" />
           <span id="password-error"></span>
 
-          <div class="checkbox-container">
+          <div class="checkbox-container" style="font-family: Helvetica">
           <label>
             <input id="saveCookie" type="checkbox" checked="checked" />
             <script type="text/javascript">
@@ -155,11 +158,16 @@
             </script>
           </label>
         </div>
-          <button type="submit" id="submit">
-            <script type="text/javascript">
-                document.write(langstr.login);
-              </script>
-          </button>
+        <button type="submit" id="submit" ></button>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        var button = document.getElementById('submit');
+        button.innerHTML = langstr.login + ' <i class="fa-solid fa-right-to-bracket" style="color: #ffffff;margin-left:3px" ></i>';
+    });
+</script>
+
+      
         </form>
         <!-- Adding the message_here span -->
         <span id="message_here"></span>

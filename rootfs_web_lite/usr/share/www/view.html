@@ -76,7 +76,7 @@ var bMessageAlert = false;
 <option>Persian</option>
 <option>Turkish</option> 
 </select></p> -->
-<select id="sel_lang" onChange="setLanguage('lang')" style="width: 12vw;margin-top: 1%;margin-bottom: 1%; margin-left: 75%; padding: 7px; border: 1px solid #ccc; font-size: 14px; border-radius: 60px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);">
+<select id="sel_lang" onChange="setLanguage('lang')" style="width: 12vw;margin-top: 1%;margin-bottom: 1%; margin-left: 85%; padding: 7px; border: 1px solid #ccc; font-size: 14px; border-radius: 60px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);">
 	<option>Language</option>
 	<option>English</option>
 	<option>简体中文</option>
@@ -89,9 +89,9 @@ var bMessageAlert = false;
   
   <div id="left" style="position: absolute;">
     <div id="logo-config" >
-		<span class="logo-inactive"style="font-size:10px;" onClick="cslshine(0);menuChange(0)" ><script type="text/javascript">document.write(langstr.preview);</script></span>
-		<span class="logo-inactive"style="font-size:12px;" id="logo-inactive1" onClick="cslshine(1);menuChange(1)"><script type="text/javascript">document.write(langstr.setup);</script></span>
-		<span  style="width:58px;font-size:12px; height:40px; line-height:40px; margin-top:15px; text-align:center; display:block; float:left; background-color:#FFFFFF;width:80px; border:1px solid #CCC; border-radius:4px 4px 0 0; cursor:pointer;" id="logo-inactive2" onClick="toPlayBack()"><script type="text/javascript">document.write(langstr.record);</script></span>
+		<span style="width:6vw;font-size:16px; height:6vh; line-height:6vh; margin-top:15px; text-align:center; display:block; float:left; background-color:#FFFFFF;border:1px solid #CCC; border-radius:4px 4px 0 0; cursor:pointer;" class="logo-inactive"style="font-size:16px;" onClick="cslshine(0);menuChange(0)" ><script type="text/javascript">document.write(langstr.preview);</script></span>
+		<span style="width:6vw;font-size:16px; height:6vh; line-height:6vh; margin-top:15px; text-align:center; display:block; float:left; background-color:#FFFFFF;border:1px solid #CCC; border-radius:4px 4px 0 0; cursor:pointer;" class="logo-inactive"style="font-size:16px;" id="logo-inactive1" onClick="cslshine(1);menuChange(1)"><script type="text/javascript">document.write(langstr.setup);</script></span>
+		<span style="font-family:Helvetica;width:6.2vw;font-size:16px; height:6vh; line-height:6vh; margin-top:15px; text-align:center; display:block; float:left; background-color:#FFFFFF;border:1px solid #CCC; border-radius:4px 4px 0 0; cursor:pointer;" id="logo-inactive2" onClick="toPlayBack()"><script type="text/javascript">document.write(langstr.record);</script></span>
     </div>
 	<!--logo-config-->
 	<div id="area-stage-left" class="hidden">
@@ -176,7 +176,7 @@ var bMessageAlert = false;
 	<!--area-stage-left-->
 	<div id="consoler">
 		<div style="position:relative; width:100%; height:100%;">
-			<div class="consoler-title" style="font-size: 20px;" id="consoler-title"><script type="text/javascript">document.write(langstr.console);</script></div>
+			<!-- <div class="consoler-title" style="font-size: 20px;" id="consoler-title"><script type="text/javascript">document.write(langstr.console);</script></div> -->
 			<!-- <hr color="#151313"> -->
 			
             <!--div class="w_imagebtn" style="background:url(images/record.png) no-repeat;" onClick="records()">
@@ -184,7 +184,7 @@ var bMessageAlert = false;
             <!--div id="div_playback" class="w_imagebtn" style="background:url(images/playback.png) no-repeat;" onClick="playback()">
             	<p id="playback" class="w_imagebtn_text" onClick="cslshine(2);"><script type="text/javascript">document.write(langstr.playback);</script></p></div-->
           <!--  PTZ  -->
-          <div id="ptz-controller" style="margin-top:10px"> <a id="ptz-controller-up"></a><a id="ptz-controller-left"></a><a id="ptz-controller-cam"></a><a id="ptz-controller-right"></a><a name="ptz-controller-down" id="ptz-controller-down"></a></div>
+          <div id="ptz-controller" style="margin-top:20px;margin-bottom:5px;margin-left:33px"> <a id="ptz-controller-up"></a><a id="ptz-controller-left"></a><a id="ptz-controller-cam"></a><a id="ptz-controller-right"></a><a name="ptz-controller-down" id="ptz-controller-down"></a></div>
 		 <!--div class="preset_sl" id="preset_sl">
 			<td width="1px;"><script type="text/javascript">document.write(langstr.ptz_speed);</script></td>
 	    	<td width="160px;">
@@ -215,12 +215,12 @@ var bMessageAlert = false;
 				</script>
 	      		<input name="text" type="text" id="ptz_speed" size="1" readonly/></td>
 	      	</div-->
-		  <div class="preset_position" style="margin-right: 30px;" id="ptz_speed">
+		  <div class="preset_position" style="margin-right: 20px;" id="ptz_speed">
 			<span><script type="text/javascript">document.write(langstr.ptz_speed);</script></span>
 			<select class="ptz_speed_select" id="ptz_speed_select" style="border:2px solid #ccc; box-shadow:1px 1px 1px gray;border-radius: 5px;">
 			</select>
 		  </div>
-	      <div class="preset_position" style="margin-right: 30px;" id="preset_position">
+	      <div class="preset_position" style="margin-right: 20px;" id="preset_position">
 			<span ><script type="text/javascript">document.write(langstr.preset);</script></span>
 			<!--select class="preset_select" id="preset_select">
 			</select-->
@@ -236,9 +236,12 @@ var bMessageAlert = false;
 		  </div-->		
 			
 		  <div class="preset_button" id="preset_button">
-			  <span style="font-size: 12px;" onclick="preset_store()"><script type="text/javascript">document.write(langstr.store);</script></span>
-			  <span style="font-size: 12px;" onclick="preset_goto()"><script type="text/javascript">document.write(langstr.goto);</script></span>
-			  <span style="font-size: 12px;" onclick="preset_clear()"><script type="text/javascript">document.write(langstr.clear);</script></span>
+			  <span style="width:50px;font-size: 12px; border:1px solid #b31816;box-shadow: 1px 1px 1px gray;font-size: 12px;background-color:#b31816;color:white;" onclick="preset_store()"><script type="text/javascript">document.write(langstr.store);</script></span>
+			  <span style="width:50px;margin-left:3px;font-size: 12px; border:1px solid #b31816;box-shadow: 1px 1px 1px gray;font-size: 12px;background-color:#b31816;color:white;" onclick="preset_goto()"><script type="text/javascript">document.write(langstr.goto);</script></span>
+			  <span style="width:50px;margin-left:3px;font-size: 12px; border:1px solid #b31816;box-shadow: 1px 1px 1px gray;font-size: 12px;background-color:#b31816;color:white;" onclick="preset_clear()"><script type="text/javascript">document.write(langstr.clear);</script></span>
+			  <!-- <span style="width:55px;font-size: 12px; border:1px solid #242424;box-shadow: 1px 1px 1px gray;font-size: 12px;background-color:#242424;color:white;" onclick="preset_store()"><script type="text/javascript">document.write(langstr.store);</script></span>
+			  <span style="width:55px;margin-left:5px;font-size: 12px; border:1px solid #242424;box-shadow: 1px 1px 1px gray;font-size: 12px;background-color:#242424;color:white;" onclick="preset_goto()"><script type="text/javascript">document.write(langstr.goto);</script></span>
+			  <span style="width:55px;margin-left:5px;font-size: 12px; border:1px solid #242424;box-shadow: 1px 1px 1px gray;font-size: 12px;background-color:#242424;color:white;" onclick="preset_clear()"><script type="text/javascript">document.write(langstr.clear);</script></span> -->
 		  </div>
 		  <script type="text/javascript">
 				var frag = document.createDocumentFragment();
@@ -265,23 +268,23 @@ var bMessageAlert = false;
 				// }
 			</script>
 		  <div class="zoom_area">
-              <p id="zoom-in" class="n_imagebtn" style="background:url(images/zoom-in.png) no-repeat; left:8%;"></p>
-              <p class="n_imagebtn_text" style="font-size:15px;left:35%; width:10%;" id="zoom"><script type="text/javascript">document.write(langstr.zoom);</script></p>
-              <p id="zoom-out" class="n_imagebtn" style="background:url(images/zoom-out.png) no-repeat; left:68%"></p>
+              <p id="zoom-in" class="n_imagebtn" style="background:url(images/zoom-in.png) no-repeat; left:13%;"></p>
+              <p class="n_imagebtn_text" style="font-size:15px;left:40%; width:10%;" id="zoom"><script type="text/javascript">document.write(langstr.zoom);</script></p>
+              <p id="zoom-out" class="n_imagebtn" style="background:url(images/zoom-out.png) no-repeat; left:72%"></p>
           </div>
           <div class="zoom_area">
-              <p id="focus-in" class="n_imagebtn" style="background:url(images/zoom-in.png) no-repeat; left:8%;"></p>
-              <p class="n_imagebtn_text" style="left:35%; width:10%;font-size:15px;" id="zoom"><script type="text/javascript">document.write(langstr.focus);</script></p>
-              <p id="focus-out" class="n_imagebtn" style="background:url(images/zoom-out.png) no-repeat; left:68%"></p>
+              <p id="focus-in" class="n_imagebtn" style="background:url(images/zoom-in.png) no-repeat; left:13%;"></p>
+              <p class="n_imagebtn_text" style="left:40%; width:10%;font-size:15px;" id="zoom"><script type="text/javascript">document.write(langstr.focus);</script></p>
+              <p id="focus-out" class="n_imagebtn" style="background:url(images/zoom-out.png) no-repeat; left:72%"></p>
           </div>
           <div class="zoom_area">
-              <p id="aperture-in" class="n_imagebtn" style="background:url(images/zoom-in.png) no-repeat; left:8%;"></p>
-              <p class="n_imagebtn_text" style="left:35%; width:10%;font-size:15px;" id="zoom"><script type="text/javascript">document.write(langstr.aperture);</script></p>
-              <p id="aperture-out" class="n_imagebtn" style="background:url(images/zoom-out.png) no-repeat; left:68%"></p>
+              <p id="aperture-in" class="n_imagebtn" style="background:url(images/zoom-in.png) no-repeat; left:13%;"></p>
+              <p class="n_imagebtn_text" style="left:40%; width:10%;font-size:15px;" id="zoom"><script type="text/javascript">document.write(langstr.aperture);</script></p>
+              <p id="aperture-out" class="n_imagebtn" style="background:url(images/zoom-out.png) no-repeat; left:72%"></p>
           </div>
            <!--<div class="w_imagebtn" style="background:url(images/fullscreen.png) no-repeat;" onClick="fullscreen_func()">
            <p class="w_imagebtn_text" id="fullscreen" ><script type="text/javascript">document.write(langstr.full_screen);</script></p></div>-->
-          <div class="w_imagebtn" style="background:url(images/stream-change.png) no-repeat; margin-left:17%;margin-top: 10%;" onClick="preview_stream()">
+          <div class="w_imagebtn" style="border-radius: 10px;color:white;margin-left:8%;margin-top: 10%;border:1px solid #3b5998;box-shadow: 2px 2px 2px gray;font-size: 12px;background-color:#242424;" onClick="preview_stream()">
           	<p class="w_imagebtn_text2" id="stream-change" style="font-size: 16px;" onclick="streamLiveChange()"><script type="text/javascript">document.write(langstr.stream_change);</script></p></div>
 			<div id="manual_download_div" class="w_imagebtn" style="display:none; background:url(images/stream-change.png) no-repeat; z-index:10001;" onClick="javascript:location.href='./IpcOcxWebPlug.exe';">
           	<p class="w_imagebtn_text2" id="manual_download" ><script type="text/javascript">document.write(langstr.Install_ActiveX);</script></p></div>
@@ -3049,8 +3052,8 @@ var bMessageAlert = false;
 	  <div class="title-window" style="margin-top: 5px;margin-bottom: 10px;font-size: 20px;" id="stream_info"><script type="text/javascript">document.write(langstr.sub_stream);</script></div>
 	<div id="containerBox" style="margin-top: 20px;">
 		<div id="container">
-			<canvas class="canvasLive" id='Live_canvas' width="960" height="559" ></canvas>
-			<canvas class="canvasLive" id='Live_canvasTemp' width="960" height="559"></canvas>
+			<!-- <canvas class="canvasLive" id='Live_canvas' width="1360" height="559" ></canvas>
+			<canvas class="canvasLive" id='Live_canvasTemp' width="1360" height="559"></canvas> -->
 		</div>
 	</div>
 	

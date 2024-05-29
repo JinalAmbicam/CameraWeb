@@ -78,10 +78,10 @@ var channel_name;
 
 
 
-if(Cookies.get("usr") == null && Cookies.get("pwd") == null)
-	{
-       top.location='login.html';
-	}
+// if(Cookies.get("usr") == null && Cookies.get("pwd") == null)
+// 	{
+//        top.location='login.html';
+// 	}
 //cover
 var oWarp;
 var oMove = [];  
